@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color"="#4076ba">
+    <meta name="description" content="Janning Group - Betriebs-Gefährdungsbeurteilung Hub">
+    <title>Janning Group - Gefährdungsbeurteilung</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icon-192.png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Home View -->
+        <div id="home-view" class="view active">
+            <header class="site-header">
+                <div class="header-inner">
+                    <div class="logo-block">
+                        <div class="logo-main">JANNING GROUP</div>
+                        <div class="logo-sub">Betriebs-Gefährdungsbeurteilung</div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="form-container">
+                <div class="cards-grid">
+                    <!-- Card 1 -->
+                    <div class="module-card" onclick="openModule('betriebs')">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
+                        <h2 class="card-title">Betriebs-Gefährdungsbeurteilung</h2>
+                        <p class="card-description">Allgemeine betriebliche Gefährdungsbeurteilung</p>
+                        <div class="card-arrow">→</div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="module-card" onclick="openModule('baustelle')">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                        </div>
+                        <h2 class="card-title">Ergänzende Gefährdungsbeurteilung</h2>
+                        <p class="card-description">Spezifische Beurteilung für Baustellen</p>
+                        <div class="card-arrow">→</div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="module-card" onclick="openModule('inspektion')">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h2 class="card-title">SGU-Inspektion</h2>
+                        <p class="card-description">Sicherheit, Gesundheit und Umweltschutz Inspektion</p>
+                        <div class="card-arrow">→</div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="module-card" onclick="openModule('werkstatt')">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <h2 class="card-title">Magazin & Werkstatt</h2>
+                        <p class="card-description">Gefährdungsbeurteilung für Magazin und Werkstatt</p>
+                        <div class="card-arrow">→</div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Module View (iFrame) -->
+        <div id="module-view" class="view">
+            <div class="module-header">
+                <button class="back-button" onclick="goHome()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                    </svg>
+                    Zurück
+                </button>
+                <h2 id="module-title" class="module-title">Modul</h2>
+            </div>
+            <iframe id="module-frame" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+{
+  "name": "Janning Group - Betriebs-Gefährdungsbeurteilung",
+  "short_name": "Janning GB",
+  "description": "Zentrale Hub für alle Gefährdungsbeurteilungs-Module der Janning Group",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#4076ba",
+  "theme_color": "#4076ba",
+  "orientation": "portrait-primary",
+  "scope": "./",
+  "lang": "de",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "business",
+    "productivity",
+    "utilities"
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Betriebs-GB",
+      "short_name": "Betriebs",
+      "description": "Betriebs-Gefährdungsbeurteilung öffnen",
+      "url": "./index.html#betriebs",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Baustelle",
+      "short_name": "Baustelle",
+      "description": "Ergänzende Gefährdungsbeurteilung Baustelle öffnen",
+      "url": "./index.html#baustelle",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "SGU-Inspektion",
+      "short_name": "Inspektion",
+      "description": "SGU-Inspektion öffnen",
+      "url": "./index.html#inspektion",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Werkstatt",
+      "short_name": "Werkstatt",
+      "description": "Magazin & Werkstatt öffnen",
+      "url": "./index.html#werkstatt",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
