@@ -1,0 +1,397 @@
+/* ============================================================
+   JANNING GROUP – Gefährdungsbeurteilung HUB  |  style.css
+   Theme: Industrial-Professional, Blue & Orange
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:         #d4d0c8;
+  --surface:    #ffffff;
+  --border:     #d4d0c8;
+  --border-dark:#b0ac9e;
+  --text:       #1a1a18;
+  --text-muted: #6b6860;
+  --accent:     #e8610a;
+  --accent-dark:#c04d00;
+  --accent-light:#fff0e6;
+  --header-bg:  #1a1a18;
+  --header-stripe: #e8610a;
+  --radius:     8px;
+  --shadow:     0 2px 8px rgba(0,0,0,0.1);
+  --shadow-md:  0 4px 16px rgba(0,0,0,0.15);
+  --font-head:  'Barlow Condensed', sans-serif;
+  --font-body:  'Barlow', sans-serif;
+}
+
+html { font-size: 15px; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.55;
+}
+
+/* ===== APP CONTAINER ===== */
+#app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.view {
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.view.active {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+  background: var(--header-bg);
+  border-bottom: 4px solid var(--header-stripe);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+}
+
+.header-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  text-align: center;
+}
+
+.logo-main {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.8rem;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.logo-sub {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* ===== MAIN CONTENT ===== */
+.form-container {
+  max-width: 1040px;
+  margin: 40px auto 60px;
+  padding: 0 24px;
+}
+
+/* ===== CARDS GRID ===== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 0;
+}
+
+.module-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.06);
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.module-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+}
+
+.module-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1), 0 8px 24px rgba(0,0,0,0.08);
+  border-color: var(--accent);
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.card-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-title {
+  font-family: var(--font-head);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  color: #4a4a46;
+  line-height: 1.4;
+}
+
+.card-arrow {
+  font-size: 1.5rem;
+  color: var(--accent);
+  font-weight: bold;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.module-card:hover .card-arrow {
+  transform: translateX(4px);
+}
+
+/* ===== MODULE VIEW ===== */
+#module-view {
+  background: white;
+}
+
+.site-header.module-active .header-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.back-button {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  font-family: var(--font-head);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: absolute;
+  left: 24px;
+}
+
+.back-button:hover {
+  background: var(--accent);
+  transform: translateX(-2px);
+}
+
+.back-button:active {
+  transform: translateX(-4px);
+}
+
+.back-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.module-active .logo-block {
+  margin: 0 auto;
+}
+
+#module-frame {
+  width: 100%;
+  height: calc(100vh - 84px);
+  border: none;
+  display: block;
+  background: white;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.module-card {
+  animation: fadeIn 0.4s ease forwards;
+  opacity: 0;
+}
+
+.module-card:nth-child(1) { animation-delay: 0.1s; }
+.module-card:nth-child(2) { animation-delay: 0.2s; }
+.module-card:nth-child(3) { animation-delay: 0.3s; }
+.module-card:nth-child(4) { animation-delay: 0.4s; }
+.module-card:nth-child(5) { animation-delay: 0.5s; }
+.module-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header-inner {
+    height: auto;
+    padding: 14px 16px;
+  }
+
+  .logo-main {
+    font-size: 1.5rem;
+  }
+
+  .logo-sub {
+    font-size: 0.65rem;
+  }
+
+  .form-container {
+    padding: 0 16px;
+    margin: 24px auto 40px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .module-card {
+    padding: 16px;
+    min-height: 90px;
+  }
+
+  .card-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  .card-description {
+    font-size: 0.88rem;
+  }
+
+  .back-button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    left: 16px;
+  }
+
+  .back-button svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .back-text {
+    display: none;
+  }
+
+  #module-frame {
+    height: calc(100vh - 76px);
+  }
+}
+
+@media (max-width: 480px) {
+  .header-inner {
+    padding: 12px;
+  }
+
+  .logo-main {
+    font-size: 1.3rem;
+  }
+
+  .logo-sub {
+    font-size: 0.6rem;
+  }
+
+  .module-card {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .card-icon {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+  }
+
+  .card-title {
+    font-size: 1.05rem;
+  }
+
+  .card-description {
+    font-size: 0.82rem;
+  }
+
+  .form-container {
+    padding: 0 12px;
+  }
+
+  .back-button {
+    padding: 0.4rem 0.6rem;
+    left: 12px;
+  }
+}
+
+/* ===== LOADING SPINNER ===== */
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
