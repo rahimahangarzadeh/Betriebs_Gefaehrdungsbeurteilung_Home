@@ -1,119 +1,28 @@
-{
+
+
+
+  {
   "name": "Janning Group - Betriebs-Gefährdungsbeurteilung",
   "short_name": "Janning GB",
   "description": "Zentrale Hub für alle Gefährdungsbeurteilungs-Module der Janning Group",
   "start_url": "/Betriebs_Gefaehrdungsbeurteilung_Home/index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#1a1a18",
   "theme_color": "#e8610a",
   "orientation": "portrait-primary",
-  "scope": "/Betriebs_Gefaehrdungsbeurteilung_Home/",
-  "lang": "de",
-  "dir": "ltr",
   "icons": [
     {
-      "src": "/Betriebs_Gefaehrdungsbeurteilung_Home/icon-192.png",
+      "src": "icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
-      "src": "/Betriebs_Gefaehrdungsbeurteilung_Home/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/Betriebs_Gefaehrdungsbeurteilung_Home/icon-512.png",
+      "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/Betriebs_Gefaehrdungsbeurteilung_Home/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
-  ],
-  "categories": [
-    "business",
-    "productivity",
-    "utilities"
-  ],
-  "screenshots": [],
-  "shortcuts": [
-    {
-      "name": "Betriebs-GB",
-      "short_name": "Betriebs",
-      "description": "Betriebs-Gefährdungsbeurteilung öffnen",
-      "url": "/Betriebs_Gefaehrdungsbeurteilung_Home/index.html#betriebs",
-      "icons": [
-        {
-          "src": "/Betriebs_Gefaehrdungsbeurteilung_Home/icon-192.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
-      "name": "Baustelle",
-      "short_name": "Baustelle",
-      "description": "Ergänzende Gefährdungsbeurteilung Baustelle öffnen",
-      "url": "/Betriebs_Gefaehrdungsbeurteilung_Home/index.html#baustelle",
-      "icons": [
-        {
-          "src": "/Betriebs_Gefaehrdungsbeurteilung_Home/icon-192.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
-      "name": "SGU-Inspektion",
-      "short_name": "Inspektion",
-      "description": "SGU-Inspektion öffnen",
-      "url": "/Betriebs_Gefaehrdungsbeurteilung_Home/index.html#inspektion",
-      "icons": [
-        {
-          "src": "/Betriebs_Gefaehrdungsbeurteilung_Home/icon-192.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
-      "name": "Werkstatt",
-      "short_name": "Werkstatt",
-      "description": "Magazin & Werkstatt öffnen",
-      "url": "/Betriebs_Gefaehrdungsbeurteilung_Home/index.html#werkstatt",
-      "icons": [
-        {
-          "src": "/Betriebs_Gefaehrdungsbeurteilung_Home/icon-192.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
-      "name": "BG BAU",
-      "short_name": "BG BAU",
-      "description": "Baustellenanmeldung BG BAU öffnen",
-      "url": "/Betriebs_Gefaehrdungsbeurteilung_Home/index.html#bgbau",
-      "icons": [
-        {
-          "src": "/Betriebs_Gefaehrdungsbeurteilung_Home/icon-192.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
-      "name": "Unterweisung",
-      "short_name": "Unterweisung",
-      "description": "Projektbezogene Unterweisung öffnen",
-      "url": "/Betriebs_Gefaehrdungsbeurteilung_Home/index.html#unterweisung",
-      "icons": [
-        {
-          "src": "/Betriebs_Gefaehrdungsbeurteilung_Home/icon-192.png",
-          "sizes": "192x192"
-        }
-      ]
+      "purpose": "any maskable"
     }
   ]
 }
