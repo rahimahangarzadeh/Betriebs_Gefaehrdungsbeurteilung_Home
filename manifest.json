@@ -4,24 +4,36 @@
   "description": "Zentrale Hub für alle Gefährdungsbeurteilungs-Module der Janning Group",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#4076ba",
-  "theme_color": "#4076ba",
+  "background_color": "#1a1a18",
+  "theme_color": "#e8610a",
   "orientation": "portrait-primary",
   "scope": "./",
   "lang": "de",
   "dir": "ltr",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "./icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "icon-512.png",
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "categories": [
@@ -38,7 +50,7 @@
       "url": "./index.html#betriebs",
       "icons": [
         {
-          "src": "icon-192.png",
+          "src": "./icon-192.png",
           "sizes": "192x192"
         }
       ]
@@ -50,7 +62,7 @@
       "url": "./index.html#baustelle",
       "icons": [
         {
-          "src": "icon-192.png",
+          "src": "./icon-192.png",
           "sizes": "192x192"
         }
       ]
@@ -62,7 +74,7 @@
       "url": "./index.html#inspektion",
       "icons": [
         {
-          "src": "icon-192.png",
+          "src": "./icon-192.png",
           "sizes": "192x192"
         }
       ]
@@ -74,7 +86,7 @@
       "url": "./index.html#werkstatt",
       "icons": [
         {
-          "src": "icon-192.png",
+          "src": "./icon-192.png",
           "sizes": "192x192"
         }
       ]
@@ -86,7 +98,7 @@
       "url": "./index.html#bgbau",
       "icons": [
         {
-          "src": "icon-192.png",
+          "src": "./icon-192.png",
           "sizes": "192x192"
         }
       ]
@@ -98,7 +110,7 @@
       "url": "./index.html#unterweisung",
       "icons": [
         {
-          "src": "icon-192.png",
+          "src": "./icon-192.png",
           "sizes": "192x192"
         }
       ]
